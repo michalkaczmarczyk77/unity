@@ -7,7 +7,7 @@ public class ToolInventory : Inventory
     // Start is called before the first frame update
     void Start()
     {
-        
+        InitializeInventory("Tool");
     }
 
     // Update is called once per frame
