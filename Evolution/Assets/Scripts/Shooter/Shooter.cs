@@ -28,8 +28,8 @@ public class Shooter : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Number of weapons: " + equipment.getWeaponInventory().NumberOfInventoryItems);
-        Debug.Log("Number of tools  : " + equipment.getToolInventory().NumberOfInventoryItems);
+        Debug.Log("Number of weapons: " + equipment.Weapons.NumberOfInventoryItems);
+        Debug.Log("Number of tools  : " + equipment.Tools.NumberOfInventoryItems);
     }
 
 }
