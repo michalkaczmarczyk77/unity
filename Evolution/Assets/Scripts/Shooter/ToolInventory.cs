@@ -10,9 +10,4 @@ public class ToolInventory : Inventory
         InitializeInventory("Tool");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

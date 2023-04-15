@@ -25,4 +25,11 @@ public class Shooter : MonoBehaviour
             equipment.getWeaponInventory().Shoot();
         }
     }
+
+    private void OnMouseDown()
+    {
+        Debug.Log("Number of weapons: " + equipment.getWeaponInventory().NumberOfInventoryItems);
+        Debug.Log("Number of tools  : " + equipment.getToolInventory().NumberOfInventoryItems);
+    }
+
 }

@@ -7,11 +7,16 @@ public class Inventory : MonoBehaviour
     private List<GameObject> inventoryItems;
     private GameObject activeItem;
     private int activeItemId;
-    private string itemClassName;
+    private string inventoryItemClassName;
+
+    public int NumberOfInventoryItems
+    {
+        get { return inventoryItems.Count; }
+    }
 
     public void InitializeInventory(string iClassName)
     {
-        itemClassName = iClassName;
+        inventoryItemClassName = iClassName;
         refresh();
     }
 
@@ -46,7 +51,7 @@ public class Inventory : MonoBehaviour
         {
             var item = transform.GetChild(i);
 
-            if(item.tag == itemClassName)
+            if(item.tag == inventoryItemClassName)
             {
                 inventoryItems.Add(item.gameObject);
             }
