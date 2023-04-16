@@ -10,6 +10,8 @@ public class Shooter : MonoBehaviour
 {
 
     private EquipmentController equipment;
+    //TODO: Add read only property
+    //public EquipmentController Equipment {
 
     // Start is called before the first frame update
     void Start()
