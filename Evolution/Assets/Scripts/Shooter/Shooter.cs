@@ -22,7 +22,7 @@ public class Shooter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            equipment.getWeaponInventory().Shoot();
+            equipment.Weapons.Shoot();
         }
     }
 
