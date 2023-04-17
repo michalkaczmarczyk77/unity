@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Glock : Weapon
 {
-    public override void Shoot()
+
+    private void Start()
+    {
+        coolDown = 1f;
+    }
+
+    public override void PerformShoot()
     {
         Debug.Log("Glock: piff paff!!!");
     }

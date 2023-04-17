@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public abstract class Weapon : MonoBehaviour
 {
     private float shootTime = 0f;
     public bool armored = true;
 
-    public float shootTimeToLive = 5f;
+    public float coolDown = 15f;
 
     public void Update()
     {
 
-        if ( armored==false && (Time.fixedUnscaledTime - shootTime >= 5f) )
+        if ( armored==false && (Time.fixedUnscaledTime - shootTime >= coolDown) )
         {
             Debug.Log(Time.fixedUnscaledTime - shootTime);
             armored = true;
@@ -26,8 +26,10 @@ public class Weapon : MonoBehaviour
         {
             shootTime = Time.fixedUnscaledTime;
             armored = false;
-            Debug.Log("Weapon: Strzał Strzał...!!!###");
+            PerformShoot();
         }
     }
+
+    public abstract void PerformShoot();
 
 }

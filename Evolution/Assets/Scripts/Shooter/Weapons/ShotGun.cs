@@ -1,17 +1,17 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Riffle : Weapon
+public class ShotGun : Weapon
 {
-
     private void Start()
     {
-        coolDown = 15f;
+        coolDown = 5f;
     }
 
     public override void PerformShoot()
     {
-        Debug.Log("Riffle: Bammmmmmm!!!");
+        Debug.Log("ShotGun: Boom Boom tra tata!!!");
     }
+
 }
